@@ -1,5 +1,7 @@
 FROM rockylinux:8
 
+USER root
+
 COPY slapd-setup.service /etc/systemd/system/
 
 RUN dnf --enablerepo=plus -y install openldap-servers openldap-clients \
