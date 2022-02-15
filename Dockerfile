@@ -1,7 +1,5 @@
 FROM rockylinux:8
 
-USER root
-
 COPY slapd-setup.service /etc/systemd/system/
 
 RUN dnf --enablerepo=plus -y install openldap-servers openldap-clients \
@@ -13,5 +11,7 @@ RUN dnf --enablerepo=plus -y install openldap-servers openldap-clients \
 COPY init.ldif /tmp/
 COPY setup.ldif /tmp/
 COPY start.sh /tmp/
+
+EXPOSE 389 636
 
 ENTRYPOINT [ "/sbin/init" ]
