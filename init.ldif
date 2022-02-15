@@ -1,0 +1,27 @@
+dn: dc=example,dc=com
+objectClass: organization
+objectClass: dcObject
+o: Example
+dc: example
+
+dn: cn=Manager,dc=example,dc=com
+objectClass: organizationalRole
+cn: Manager
+
+dn: ou=Users,dc=example,dc=com
+objectClass: organizationalUnit
+ou: Users
+
+dn: ou=Groups,dc=example,dc=com
+objectClass: organizationalUnit
+ou: Groups
+
+dn: uid=user1,ou=Users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: user1
+userPassword: {SSHA}PuVaufaaXWooPjDH6jgm4aTqfgrIwjmt
+
+dn: cn=amq,ou=Groups,dc=example,dc=com
+objectClass: groupOfUniqueNames
+cn: amq
+uniqueMember: uid=user1,ou=Users,dc=example,dc=com

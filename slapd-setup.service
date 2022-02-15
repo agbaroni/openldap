@@ -1,0 +1,13 @@
+[Unit]
+
+After=slapd.service
+
+[Service]
+
+ExecStart=/bin/bash /tmp/start.sh
+RemainAfterExit=yes
+Type=oneshot
+
+[Install]
+
+WantedBy=multi-user.target
