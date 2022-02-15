@@ -20,8 +20,10 @@ dn: uid=user1,ou=Users,dc=example,dc=com
 objectClass: inetOrgPerson
 uid: user1
 userPassword: {SSHA}PuVaufaaXWooPjDH6jgm4aTqfgrIwjmt
+sn: user1
+cn: user1
 
-dn: cn=amq,ou=Groups,dc=example,dc=com
+dn: cn=admin,ou=Groups,dc=example,dc=com
 objectClass: groupOfUniqueNames
-cn: amq
+cn: admin
 uniqueMember: uid=user1,ou=Users,dc=example,dc=com
